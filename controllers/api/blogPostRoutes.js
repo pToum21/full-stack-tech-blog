@@ -3,12 +3,12 @@ const { BlogPost } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // this creates a new blog post
-router.post('/', withAuth, async (req, res) => {
+router.post('/', async (req, res) => {
     // uses userid to create a post
     try {
         const BlogPostData = await BlogPost.create({
             ...req.body,
-            user_id: req.session.user_id
+            user_id: req.session.user_id,
         });
         res.status(200).json(BlogPostData)
     } catch (err) {
@@ -16,7 +16,7 @@ router.post('/', withAuth, async (req, res) => {
     }
 });
 
-router.put('/:id', withAuth, async (req, res) => {
+router.put('/:id', async (req, res) => {
     try {
         const BlogPostData = await BlogPost.update({
             ...req.body,
@@ -25,9 +25,10 @@ router.put('/:id', withAuth, async (req, res) => {
             {
                 where: {
                     id: req.params.id,
-                    user_id: req.session.user_id
+                    user_id: req.session.user_id,
                 }
             })
+
 
         if (!BlogPostData) {
             res.status(404).json({ message: 'Cannot find post you are looking for with this id' })
@@ -41,12 +42,12 @@ router.put('/:id', withAuth, async (req, res) => {
 })
 
 // delete blog post
-router.delete('/:id', withAuth, async (req, res) => {
+router.delete('/:id', async (req, res) => {
     try {
         const BlogPostData = await BlogPost.destroy({
             where: {
                 id: req.params.id,
-                user_id: req.session.user_id
+                user_id: req.session.user_id,
             }
         });
 
@@ -60,3 +61,5 @@ router.delete('/:id', withAuth, async (req, res) => {
         res.status(400).json(err)
     }
 })
+
+module.exports = router
