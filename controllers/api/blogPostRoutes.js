@@ -29,7 +29,6 @@ router.put('/:id', async (req, res) => {
                 }
             })
 
-
         if (!BlogPostData) {
             res.status(404).json({ message: 'Cannot find post you are looking for with this id' })
             return;
