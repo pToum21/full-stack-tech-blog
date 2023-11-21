@@ -23,8 +23,10 @@ router.get('/', withAuth, async (req, res) => {
     }
 })
 
+// user post
 router.get('/:id', withAuth, async (req, res) => {
     try {
+        // get specific blog post with user comment and description
         const userPostData = await BlogPost.findByPk(req.params.id, {
             include: [
                 {
@@ -39,6 +41,7 @@ router.get('/:id', withAuth, async (req, res) => {
 
         const userPost = userData.get({ plain: true })
 
+        // render users post and edit view
         res.render('edit', {
             ...userPost,
             logged_in: true

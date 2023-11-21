@@ -25,7 +25,7 @@ router.delete('/:id', withAuth, async (req, res) => {
             }
         });
 
-        if (!commentData){
+        if (!commentData) {
             res.status(404).json({ message: 'Cannot find the comment you are looking for with this id' });
             return;
         }
