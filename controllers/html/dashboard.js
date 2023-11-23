@@ -42,7 +42,7 @@ router.get('/:id', withAuth, async (req, res) => {
             ]
         })
 
-        const userPost = userData.get({ plain: true })
+        const userPost = userPostData.get({ plain: true })
 
         // render users post and edit view
         res.render('edit', {

@@ -1,35 +1,31 @@
 <div class="row">
     <div class="col-auto">
-        <h2>Welcome, {{blogPost.user.name}}!</h2>
+        <h2>Welcome, {{blogPost.user_name}}!</h2>
     </div>
 </div>
 
 <div class="row mt-4">
     <div class="col-md-6">
-        <h3>Create a New Project:</h3>
+        <h3>Create a New Post:</h3>
 
         <form class="form new-project-form">
             <div class="form-group">
-                <label for="project-name">project name:</label>
+                <label for="project-name">Post Title: </label>
                 <input class="form-input" type="text" id="project-name" name="project-name" />
             </div>
             <div class="form-group">
-                <label for="project-funding">needed funding ($):</label>
-                <input class="form-input" type="number" id="project-funding" name="project-funding" />
-            </div>
-            <div class="form-group">
-                <label for="project-desc">description:</label>
+                <label for="project-desc">Description:</label>
                 <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary">Create</button>
+                <button type="submit" class="btn btn-primary">Post</button>
             </div>
         </form>
     </div>
 
 
     <div class="col-md-6 project-list">
-        <h3>Current Projects:</h3>
+        <h3>Current Posts:</h3>
 
         {{#each BlogPosts as |blogPost|}}
         <div class="row mb-2">
@@ -37,7 +33,7 @@
                 <h4><a href="/dashboard/{{blogPost.id}}">{{blogPost.title}}</a></h4>
             </div>
             <div class="col-md-4">
-                <button class="btn btn-sm btn-danger" data-id="{{blogPost.user.name}}">DELETE</button>
+                <button class="btn btn-sm btn-danger" data-id="{{blogPost.user_name}}">DELETE</button>
             </div>
         </div>
         {{/each}}

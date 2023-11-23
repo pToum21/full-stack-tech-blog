@@ -16,22 +16,23 @@
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
         <a href="/dashboard">dashboard</a> |
-        <button class="no-button" id="logout">logout</button>
+        <button class="no-button" id="logout">logout</button> |
+        <a href="/">home</a> |
         {{else}}
-        <a href="/login">login</a>
+        <a href="/login">login</a> |
         {{/if}}
       </nav>
     </header>
     <main class="container container-fluid mt-5">
-      <!-- Render the sub layout -->
+
       {{{ body }}}
     </main>
     <footer>
-      
+
     </footer>
   </div>
 
-  <!-- Render script for logged in users only -->
+
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}

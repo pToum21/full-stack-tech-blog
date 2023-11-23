@@ -2,17 +2,15 @@
 <div class="row mb-4 project">
   <div class="col-md-5">
     <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+      {{blogPost.title}}
       
-      <a href="/project/{{blogPost.id}}">{{blogPost.name}}</a>
+      <a href="/dashboard/{{blogPost.user_id}}">
+      {{!-- {{blogPost.user_name}} --}}
+      adsasdasdads
+      </a>
     </h2>
-    <p>
-      <span for="img" aria-label="money">💲</span>
-      <!-- Pass needed_funding value to the helper function -->
-     
-      needed!
-    </p>
-    <p>Created by {{blogPost.user.name}} on {{format_date blogPost.upload_date}}</p>
+    
+    <p>Created by {{blogPost.user_name}} on {{format_date blogPost.upload_date}}</p>
   </div>
   <div class="col-md-7">
     <p>
