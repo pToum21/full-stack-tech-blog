@@ -17,12 +17,25 @@
                     <h5 class="lead">{{description}}</h5>
                     <p class="blockquote-footer custom-at mt-1">@{{user.user_name}}</p>
                 </div>
-                <div>
-                    <button class="btn btn-secondary btn-edit me-2 mt-2" data-id="{{id}}" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal">Comment</button>
-                    <button class="btn btn-danger btn-delete me-2 mt-2" data-id="{{id}}">Delete</button>
-                    
-                </div>
+                <form action="">
+                    <div class="col-md-6">
+                        <h3>Update Post:</h3>
+
+                        <form class="form new-project-form">
+                            <div class="form-group">
+                                <label for="project-name">Post Title: </label>
+                                <input value="{{title}}"  class="form-input" type="text" id="project-name" name="project-name" />
+                            </div>
+                            <div class="form-group">
+                                <label for="project-desc">Description:</label>
+                                <input value="{{description}}" class="form-input" id="project-desc" name="project-desc"></input>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">Post</button>
+                            </div>
+                        </form>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

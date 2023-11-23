@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
         })
         console.log(userData)
         const user = userData.get({ plain: true });
-
+        console.log(user)
         // display all user posts and remder the dashboard
         res.render('dashboard', {
             ...user,

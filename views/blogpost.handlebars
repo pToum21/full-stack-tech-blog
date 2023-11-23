@@ -1,1 +1,29 @@
-<h1>asdasdasdasd</h1>
+<div class="row my-4">
+    <div class="col post-item">
+        <div class="custom-card">
+            <div class="bg-dark text-light p-2 d-flex justify-content-between">
+                <h3>{{title}}</h3>
+
+                <div>
+                    <em class="lead text-secondary fs-6 me-1"></em>
+
+                </div>
+
+                <em class="my-auto">{{format_date upload_date}}</em>
+
+            </div>
+            <div class="px-2 pt-2 my-1 d-flex justify-content-between">
+                <div>
+                    <h5 class="lead">{{description}}</h5>
+                    <p class="blockquote-footer custom-at mt-1">@{{user.user_name}}</p>
+                </div>
+                <div>
+                    <button class="btn btn-secondary btn-edit me-2 mt-2" data-id="{{id}}" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">Comment</button>
+                    <button class="btn btn-danger btn-delete me-2 mt-2" data-id="{{id}}">Delete</button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
