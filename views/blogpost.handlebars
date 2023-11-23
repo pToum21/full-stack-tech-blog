@@ -17,12 +17,6 @@
                     <h5 class="lead">{{description}}</h5>
                     <p class="blockquote-footer custom-at mt-1">@{{user.user_name}}</p>
                 </div>
-                <div>
-                    <button class="btn btn-secondary btn-edit me-2 mt-2" data-id="{{id}}" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal">Comment</button>
-                    <button class="btn btn-danger btn-delete me-2 mt-2" data-id="{{id}}">Delete</button>
-
-                </div>
 
                 <div>
                     {{#each comments}}
@@ -42,7 +36,20 @@
                     </div>
                     {{/each}}
                 </div>
+                <form class="form new-project-form">
+                    <div class="form-group">
+                        <label for="project-name">Leave a Comment: </label>
+                        <input value="" class="form-input" type="text" id="comment" name="project-name" />
+
+                        <button id="add-comment"  class="btn btn-secondary btn-edit me-2 mt-2" data-id="{{id}}" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Comment</button>
+
+
+
+                    </div>
             </div>
         </div>
     </div>
 </div>
+
+<script src="/js/comment.js"></script>
