@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-auto">
-        <h2>Welcome, {{blogPost.user_name}}!</h2>
+        <h2>Welcome, {{user_name}}!</h2>
     </div>
 </div>
 
@@ -25,20 +25,20 @@
 
 
     <div class="col-md-6 project-list">
-        <h3>Current Posts:</h3>
-
-        {{#each BlogPosts as |blogPost|}}
-        <div class="row mb-2">
-            <div class="col-md-8">
-                <h4><a href="/dashboard/{{blogPost.id}}">{{blogPost.title}}</a></h4>
-            </div>
-            <div class="col-md-4">
-                <button class="btn btn-sm btn-danger" data-id="{{blogPost.user_name}}">DELETE</button>
+        <div>
+            <h2>My posts</h2>
+            <div class="dashboard">
+                {{#each blogPosts as |blogPost|}}
+                <a href="/dashboard/{{id}}">
+                    <h2>{{blogPost.title}}</h2>
+                </a>
+                <p>{{blogPost.description}}</p>
+                <p>Created on {{format_date upload_date}}</p>
+                <button class="del-btn" data-id="{{id}}">Delete</button>
+                {{/each}}
             </div>
         </div>
-        {{/each}}
+
     </div>
 
-</div>
-
-<script src="./js/dashboard.js"></script>
+    <script src="/js/dashboard.js"></script>
