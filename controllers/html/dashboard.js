@@ -3,15 +3,16 @@ const withAuth = require('../../utils/auth')
 const router = require('express').Router();
 
 // user dashboard
-router.get('/', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
     // get all posts made by user including user data
     try {
         const userData = await User.findByPk(req.session.user_id, {
             attributes: { exclude: ['password'] },
             include: [{ model: BlogPost, include: [User] }]
         })
-
+        console.log(userData)
         const user = userData.get({ plain: true });
+        
         // display all user posts and remder the dashboard
         res.render('dashboard', {
             ...user,
@@ -19,7 +20,9 @@ router.get('/', withAuth, async (req, res) => {
         })
 
     } catch (err) {
+        console.log(err)
         res.status(400).json(err)
+        
     }
 })
 
