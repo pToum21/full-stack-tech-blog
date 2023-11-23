@@ -3,14 +3,13 @@
   <div class="col-md-5">
     <h2>
       {{blogPost.title}}
-      
-      <a href="/dashboard/{{blogPost.user_id}}">
-      {{!-- {{blogPost.user_name}} --}}
-      adsasdasdads
+
+      <a href="/post/{{blogPost.user_id}}">
+        {{user.user_name}}
       </a>
     </h2>
-    
-    <p>Created by {{blogPost.user_name}} on {{format_date blogPost.upload_date}}</p>
+
+    <p>Created by {{user.user_name}} on {{format_date blogPost.upload_date}}</p>
   </div>
   <div class="col-md-7">
     <p>
