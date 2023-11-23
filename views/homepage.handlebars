@@ -1,1 +1,23 @@
-<h1>Hello world</h1>
+{{#each blogPosts as |blogPost| }}
+<div class="row mb-4 project">
+  <div class="col-md-5">
+    <h2>
+      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+      
+      <a href="/project/{{blogPost.id}}">{{blogPost.name}}</a>
+    </h2>
+    <p>
+      <span for="img" aria-label="money">💲</span>
+      <!-- Pass needed_funding value to the helper function -->
+     
+      needed!
+    </p>
+    <p>Created by {{blogPost.user.name}} on {{format_date blogPost.upload_date}}</p>
+  </div>
+  <div class="col-md-7">
+    <p>
+      {{blogPost.description}}
+    </p>
+  </div>
+</div>
+{{/each}}
