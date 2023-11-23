@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
         })
         console.log(userData)
         const user = userData.get({ plain: true });
-        
+
         // display all user posts and remder the dashboard
         res.render('dashboard', {
             ...user,
@@ -22,7 +22,7 @@ router.get('/', async (req, res) => {
     } catch (err) {
         console.log(err)
         res.status(400).json(err)
-        
+
     }
 })
 
@@ -30,6 +30,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', withAuth, async (req, res) => {
     try {
         // get specific blog post with user comment and description
+        const commentData = await Comment.findByPk(req.params.id)
         const userPostData = await BlogPost.findByPk(req.params.id, {
             include: [
                 {
@@ -43,10 +44,11 @@ router.get('/:id', withAuth, async (req, res) => {
         })
 
         const userPost = userPostData.get({ plain: true })
+        const comment = commentData.get({ plain: true })
 
         // render users post and edit view
         res.render('edit', {
-            ...userPost,
+            ...userPost, comment,
             logged_in: true
         })
 
