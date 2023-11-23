@@ -21,7 +21,26 @@
                     <button class="btn btn-secondary btn-edit me-2 mt-2" data-id="{{id}}" data-bs-toggle="modal"
                         data-bs-target="#exampleModal">Comment</button>
                     <button class="btn btn-danger btn-delete me-2 mt-2" data-id="{{id}}">Delete</button>
-                    
+
+                </div>
+
+                <div>
+                    {{#each comments}}
+                    <div class="row my-4">
+                        <div class="col-6">
+                            <div class="custom-card">
+                                <div class="mb-1 p-2 d-flex justify-content-between">
+                                    <h5 class="lead">{{description}}</h5>
+                                    <em><small class="text-secondary">{{format_date upload_date}}</small></em>
+                                </div>
+                                <div class="px-2 d-flex justify-content-between">
+                                    <p class="blockquote-footer custom-at"> @{{user.user_name}}</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
                 </div>
             </div>
         </div>
