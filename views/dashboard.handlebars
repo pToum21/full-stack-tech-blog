@@ -30,9 +30,9 @@
             <div class="dashboard">
                 {{#each blogPosts as |blogPost|}}
                 <a href="/dashboard/{{id}}">
-                    <h2>{{title}}</h2>
+                    <h2>{{blogPost.title}}</h2>
                 </a>
-                <p>{{description}}</p>
+                <p>{{blogPost.description}}</p>
                 <p>Created on {{format_date upload_date}}</p>
                 <button class="del-btn" data-id="{{id}}">Delete</button>
                 {{/each}}
@@ -41,7 +41,4 @@
 
     </div>
 
-
-   
-
-    <script src="/js/dashboard.js"></script>
+    <script src="./js/dashboard.js"></script>

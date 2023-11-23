@@ -3,7 +3,7 @@ const withAuth = require('../../utils/auth')
 const router = require('express').Router();
 
 // user dashboard
-router.get('/', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
     // get all posts made by user including user data
     try {
         const userData = await User.findByPk(req.session.user_id, {
