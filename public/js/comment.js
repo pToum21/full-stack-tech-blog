@@ -26,21 +26,7 @@ const addComment = async (event) => {
     }
 };
 
-// delete user comment
-const deleteCommentHandler = async (event) => {
-    // get comment id
-    const id = event.target.getAttribute('data-id');
-    // make api call wiht comment id
-    const response = await fetch(`/api/comment/${id}`, {
-        method: 'DELETE',
-    });
-    // reload page after comment is deleted
-    if (response.ok) {
-        document.location.reload();
-    } else {
-        alert('Failed to delete comment');
-    }
-};
+
 
 const commentDeleteBtn = document.querySelectorAll('#delete-comment');
 // event delegation for all comment delete buttons
