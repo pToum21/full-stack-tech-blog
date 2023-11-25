@@ -1,26 +1,50 @@
-
-body { 
-	background: #233142; 
-}
-	
-.second-color { 
-	background: #455d7a; 
+header {
+  height: 100px;
 }
 
-a, h3, #logout, label, .del-btn{ 
-	color: #f95959; 
+nav {
+  font-size: 20px;
+  padding: 15px;
+}
+
+body {
+  background: #233142;
+}
+
+a,
+h3,
+#logout,
+label,
+.del-btn {
+  color: #f95959;
 }
 
 .del-btn {
   background-color: black;
 }
 
-p, h2{ 
-	color: #e3e3e3; 
+p,
+h2 {
+  color: #e3e3e3;
 }
 
+.project {
+  margin: 30px;
+  background-color: #133157;
 
-header, .project:not(:last-child) {
+}
+
+.project:hover {
+  color: #494949 !important;
+  border-color: #f0e6e6 !important;
+  transition: all 0.3s ease 0s;
+  color: rgb(16, 239, 255);
+  box-shadow: 0 0 5px #10f7ff;
+  text-shadow: 0 0 5px #10f7ff;
+}
+
+header,
+.project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
 
@@ -38,6 +62,3 @@ header, .project:not(:last-child) {
   color: #065b83;
   text-decoration: underline;
 }
-
-
-
