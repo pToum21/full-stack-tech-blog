@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
         })
 
         const blogPosts = blogPostData.map((post) => post.get({ plain: true }));
-        console.log(blogPosts)
+        
 
         // render the data with the hompage view
         res.render('homepage', {

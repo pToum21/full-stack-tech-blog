@@ -10,9 +10,9 @@ router.get('/', async (req, res) => {
             attributes: { exclude: ['password'] },
             include: [{ model: BlogPost, include: [User] }]
         })
-        console.log(userData)
+
         const user = userData.get({ plain: true });
-        console.log(user)
+
         // display all user posts and remder the dashboard
         res.render('dashboard', {
             ...user,
@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
         })
 
     } catch (err) {
-        
+
         res.status(400).json(err)
 
     }
