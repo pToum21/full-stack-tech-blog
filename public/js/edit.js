@@ -10,7 +10,7 @@ const updateBlogPost = async () => {
             body: JSON.stringify({ title, description }),
             headers: { 'Content-type': 'application/json' },
         });
-        console.log(response)
+       
 
 
         if (response.ok) {
