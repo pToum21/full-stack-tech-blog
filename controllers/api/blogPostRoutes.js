@@ -16,17 +16,19 @@ router.post('/', async (req, res) => {
     }
 });
 
-router.put('/:id', async (req, res) => {
+router.put('/:id', withAuth, async (req, res) => {
     try {
         const BlogPostData = await BlogPost.update({
             ...req.body,
             date_updated: new Date(),
+            
         },
             {
                 where: {
                     id: req.params.id,
                     user_id: req.session.user_id,
                 }
+               
             })
 
         if (!BlogPostData) {
@@ -36,6 +38,7 @@ router.put('/:id', async (req, res) => {
 
         res.status(200).json(BlogPostData)
     } catch (err) {
+        
         res.status(400).json(err)
     }
 })
