@@ -1,3 +1,25 @@
+
+body { 
+	background: #233142; 
+}
+	
+.second-color { 
+	background: #455d7a; 
+}
+
+a, h3, #logout, label, .del-btn{ 
+	color: #f95959; 
+}
+
+.del-btn {
+  background-color: black;
+}
+
+p, h2{ 
+	color: #e3e3e3; 
+}
+
+
 header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
@@ -16,4 +38,6 @@ header, .project:not(:last-child) {
   color: #065b83;
   text-decoration: underline;
 }
+
+
 
