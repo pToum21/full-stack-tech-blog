@@ -26,12 +26,16 @@ label,
 p,
 h2 {
   color: #e3e3e3;
+  font-size: 20px;
 }
 
 .project {
   margin: 30px;
   background-color: #133157;
-
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  color: #fff;
 }
 
 #homepage-name {
@@ -47,7 +51,10 @@ p {
 .project-list {
   padding-left: 10%;
   width: 70%;
+  border: #f95959 solid 2px;
+ border-radius: 25% 15%;
 }
+
 
 .project:hover {
   color: #494949 !important;
@@ -60,7 +67,7 @@ p {
 
 header,
 .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #cfcbcb;
 }
 
 .no-button {
