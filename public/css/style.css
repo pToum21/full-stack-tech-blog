@@ -34,6 +34,11 @@ h2 {
 
 }
 
+#homepage-name {
+  font-size: 25px;
+  color: #f95959;
+}
+
 p {
   padding-top: 30px;
   font-size: 17px;
