@@ -40,7 +40,7 @@ https://github.com/pToum21/full-stack-tech-blog/assets/138056441/b3c9f2e9-6aba-4
 ![techBlog preview](https://github.com/pToum21/full-stack-tech-blog/assets/138056441/ce95f8e4-870b-4269-939e-5e1b46755210)
 
 ## Deployed Application
-
+https://tech-blogger-the-full-exp-603c6ae302d3.herokuapp.com/
 
 ## Qustions - ❓
 Feel Free to contact me at pey3moo3@gmail.com or [ptoum21](https://github.com/ptoum21).
