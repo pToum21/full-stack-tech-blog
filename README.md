@@ -12,8 +12,6 @@
 * used express to allow the user to do CRUD methods on the website
 * used async await 
 
-
-
 ## Table of Contents - 📋
 * [Installation](#installation---☢️)
 * [Usage](#usage---💎)
@@ -36,10 +34,10 @@ You must npm run seed to seed the database
 You must npm run start to the open the application view localhost{port}
 
 ## Preview Video
-
+https://github.com/pToum21/full-stack-tech-blog/assets/138056441/b3c9f2e9-6aba-42ff-adf2-e22daae4ece4
 
 ## Preview Photo
-
+![techBlog preview](https://github.com/pToum21/full-stack-tech-blog/assets/138056441/ce95f8e4-870b-4269-939e-5e1b46755210)
 
 ## Deployed Application
 
