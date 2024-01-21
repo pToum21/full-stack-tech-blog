@@ -1,42 +1,87 @@
-<div class="row">
-    <div class="col-md-6">
-        <h2>Login</h2>
+<!DOCTYPE html>
+<html lang="en">
 
-        <form class="form login-form">
-            <div class="form-group">
-                <label for="email-login">email:</label>
-                <input class="form-input" type="text" id="email-login" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Signup</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- Bootstrap JS dependencies -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <div>
+            <div class="col-md-6">
+                <h2>Login/Signup</h2>
+                <!-- Login Form -->
+                <form class="form login-form">
+                    <div class="form-group">
+                        <label for="email-login">Email:</label>
+                        <input class="form-control" type="text" id="email-login" />
+                    </div>
+                    <div class="form-group">
+                        <label for="password-login">Password:</label>
+                        <input class="form-control" type="password" id="password-login" />
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary" type="submit">Login</button>
+                        <!-- Signup Button to Open Modal -->
+                        <button class="btn btn-primary ml-2" data-toggle="modal"
+                            data-target="#signupModal">Signup</button>
+                    </div>
+                </form>
             </div>
-            <div class="form-group">
-                <label for="password-login">password:</label>
-                <input class="form-input" type="password" id="password-login" />
+            
+
+                <!-- Signup Modal -->
+                <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="signupModalLabel">Signup</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Signup Form -->
+                                <form class="form signup-form">
+                                    <div class="form-group">
+                                        <label for="name-signup">Name:</label>
+                                        <input class="form-control" type="text" id="name-signup" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email-signup">Email:</label>
+                                        <input class="form-control" type="text" id="email-signup" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password-signup">Password:</label>
+                                        <input class="form-control" type="password" id="password-signup" />
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-primary" type="submit">Signup</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <button class="btn btn-primary" type="submit">login</button>
-            </div>
-        </form>
+        
     </div>
-    <div class="col-md-6">
-        <h2>Signup</h2>
 
-        <form class="form signup-form">
-            <div class="form-group">
-                <label for="name-signup">name:</label>
-                <input class="form-input" type="text" id="name-signup" />
-            </div>
-            <div class="form-group">
-                <label for="email-signup">email:</label>
-                <input class="form-input" type="text" id="email-signup" />
-            </div>
-            <div class="form-group">
-                <label for="password-signup">password:</label>
-                <input class="form-input" type="password" id="password-signup" />
-            </div>
-            <div class="form-group">
-                <button class="btn btn-primary" type="submit">signup</button>
-            </div>
-        </form>
-    </div>
-</div>
+    <!-- Include your login.js script -->
+    <script src="./js/login.js"></script>
 
-<script src="./js/login.js"></script>
+</body>
+
+</html>
